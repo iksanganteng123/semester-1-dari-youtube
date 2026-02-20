@@ -1,0 +1,77 @@
+html,
+body .kontensatu {
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+}
+body {
+  background-color: aliceblue;
+  color: black;
+}
+.modemarah {
+  background-color: red;
+  color:orange;
+}
+.ganti {
+  background: black;
+  color: aliceblue;
+}
+nav {
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+  padding: 15px;
+}
+nav a {
+  color: aliceblue;
+  padding: 15px;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: aqua;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  border-radius: 30px;
+}
+.inti {
+  display: flex;
+  font-size: 15px;
+  top: 10%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  animation: wadidaw 0.5s infinite;
+}
+@keyframes wadidaw {
+  0% {
+    font-size: 15px;
+  }
+  50% {
+    font-size: 20px;
+  }
+  100% {
+    font-size: 15px;
+  }
+}
+.marah {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  top: 10%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  animation: kokokbrut .5s infinite;
+}
+@keyframes kokokbrut {
+  0% {
+    font-size: 20px;
+  }
+  50% {
+    font-size: 25px;
+  }
+  100% {
+    font-size: 20px;
+  }
+}

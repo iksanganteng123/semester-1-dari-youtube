@@ -1,0 +1,73 @@
+<style>
+  *, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  video {
+    display: block;
+    width: 100%;
+  }
+  .vidio-componen {
+   position:absolute;
+   bottom: 0;
+   left: 0;
+   padding: 10px 12px;
+  }
+  .container {
+    max-widht: 25px  ;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid red ;
+  }
+  .btn {
+    border: none;
+    padding: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 20px;
+  }
+  .btn-play {
+    background-color: crimson;
+    color: white;
+  }
+  .btn-minimaze{
+    background-color: #222222;
+  }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show vidio</title>
+</head>
+<body>
+  <div class="container">
+  <video width="720">
+    <source src="timoty keren.mp4">
+  </video>
+  <div class="vidio-componen">
+    <button onclick="play()" class="btn btn-play">Play</button>
+    <button onclick="Pause()" class="btn btn-pause">Pause</button>
+    <button onclick="Minimaze()" class="btn btn-minimaze">Minimaze</button>
+  </div>
+  </div>
+</body>
+<script>
+  const VidioComponent = document.querySelector("video");
+  function play(){
+    console.log('playing vidio')
+    VidioComponent.play()
+  }
+  function Pause() {
+    console.log('pause vidio')
+    VidioComponent.pause()
+  }
+  function Minimaze() {
+    console.log('minimaze vidio')
+    VidioComponent.requestPictureInPicture()
+  }
+</script>
+</html>

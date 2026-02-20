@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <title>ini adalah tugas sesi 4</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <h1>LAMPU RUANGG KELELUARGA</h1>
+    <div
+      class="flex justify-center items-center min-h-screen bg-gray-300 gap-10"
+    >
+      <!-- LAMPU SATU  -->
+      <div class="flex flex-col gap-2 items-center bg-green-500">
+        <img src="lampu of.jpg" alt="" id="lamp1" />
+        <button onclick="saklar('on',1)" class="bg-white p-4">
+          nyalakan lampu
+        </button>
+        <button onclick="saklar('of',1)" class="bg-white p-4">
+          matikan lampu
+        </button>
+      </div>
+      <!-- LAMPU DUA  -->
+      <div class="flex flex-col gap-2 items-center bg-green-500">
+        <img src="lampu of.jpg" alt="" id="lamp22" />
+        <button onclick="saklar('on',2)" class="bg-white p-4">
+          nyalakan lampu
+        </button>
+        <button onclick="saklar('of',2)" class="bg-white p-4">
+          matikan lampu
+        </button>
+      </div>
+      <!-- LAMPU TIGA  -->
+      <div class="flex flex-col gap-2 items-center bg-green-500">
+        <img src="lampu of.jpg" alt="" id="lamp3" />
+        <button onclick="saklar('on',3)" class="bg-white p-4">
+          nyalakan lampu
+        </button>
+        <button onclick="saklar('of',3)" class="bg-white p-4">
+          matikan lampu
+        </button>
+      </div>
+      <!-- LAMPU EMPAT  -->
+      <div class="flex flex-col gap-2 items-center bg-green-500">
+        <img src="lampu of.jpg" alt="" id="lamp4" />
+        <button onclick="saklar('on',4)" class="bg-white p-4">murub</button>
+        <button onclick="saklar('of',4)" class="bg-white p-4">modar</button>
+      </div>
+    </div>
+    <!-- INI ADALAH SEBUAH TOGEL SATU  -->
+    <div
+      class="flex justify-center items-center min-h-screen bg-gray-300 gap-10"
+    >
+      <div class="felx flex-col items-center bg-red-800">
+        <img src="lampu of.jpg" alt="" id="initogel1" />
+        <div class="flex items-center">
+          <label
+            for="togel1"
+            class="relative block h-8 w-14 rounded-full bg-gray-300 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-green-500 dark:bg-gray-600 dark:has-checked:bg-green-600"
+          >
+            <input
+              type="checkbox"
+              id="togel1"
+              class="peer sr-only"
+              onchange="saklar2()"
+            />
+            <span
+              class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6 dark:bg-gray-900"
+            ></span>
+          </label>
+        </div>
+      </div>
+      <!-- INI ADALAH TOGEL SATU END  -->
+
+      <!-- INI ADALAH SEBUAH LAMPU TOGEL DUA  -->
+      <div class="flex flex-col items-center bg-red-800">
+        <img src="lampu of.jpg" alt="" id="iniadalahtogel" />
+        <label
+          for="togel22"
+          class="relative block h-8 w-14 rounded-full bg-gray-300 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-green-500 dark:bg-gray-600 dark:has-checked:bg-green-600"
+        >
+          <input
+            type="checkbox"
+            id="togel22"
+            class="peer sr-only"
+            onchange="saklar2()"
+          />
+
+          <span
+            class="absolute inset-y-0 start-0 m-1 grid size-6 place-content-center rounded-full bg-white text-gray-700 transition-[inset-inline-start] peer-checked:start-6 peer-checked:*:first:hidden *:last:hidden peer-checked:*:last:block dark:bg-gray-900 dark:text-gray-200"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m4.5 12.75 6 6 9-13.5"
+              />
+            </svg>
+          </span>
+        </label>
+      </div>
+      <!-- INI ADALAH TOGEL DUA END  -->
+      <div class="flex flex-col items-center bg-blue-600">
+        <img src="lampu of.jpg" alt="" id="togel3" />
+        <label
+          for="togel33"
+          class="relative block h-8 w-14 rounded-full bg-gray-300 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-blue-500 dark:bg-gray-600 dark:has-checked:bg-blue-600"
+        >
+          <input
+            type="checkbox"
+            id="togel33"
+            class="peer sr-only"
+            onchange="saklar2()"
+          />
+
+          <span
+            class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-gray-300 ring-[6px] ring-white transition-all ring-inset peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent dark:bg-gray-600 dark:ring-gray-900 dark:peer-checked:bg-gray-900"
+          >
+          </span>
+        </label>
+      </div>
+    </div>
+    <!-- YANG INI TOGEL BEDAAA  -->
+    <div
+      class="flex justify-center items-center min-h-screen bg-red-800 gap-20"
+    >
+      <div class="flex flex-col items-center bg-white-500">
+        <img src="lampu of.jpg" alt="" id="togelbeda" />
+        <button onclick="togelaneh('mem',9)" class="bg-blue-600 p-4">on</button>
+        <button onclick="togelaneh('mew',9)" class="bg-blue-600 p-4">of</button>
+      </div>
+    </div>
+
+    <script src="saklar1.js"></script>
+  </body>
+</html>

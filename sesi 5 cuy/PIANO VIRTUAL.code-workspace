@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../PIANO VIRTUAL"
+	},
+	{
+		"path": "../../../../../Downloads/assets"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "PIANO VIRTUAL"
+  }
+}

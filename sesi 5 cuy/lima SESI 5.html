@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <style>
+      #root {
+        background-color: aqua;
+        color: blue;
+        font-size: 2em;
+        text-align: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <input type="text" placeholder="username" id="loginpalsu" />
+      <input type="password" placeholder="pasword" id="passpalsu" />
+      <button onclick="typologin()" id="tombol">LOGIN</button>
+      <button onclick="typologout()" id="typologout">LOGIN</button>
+      <br />
+      <br />
+      <h1 id="admin">LOGIN SEBAGAI ADMIN</h1>
+      <h1 id="basic">LOGIN SEBAGAI USER BIASA</h1>
+      <h1 id="member">LOGIN SEBAGAI MEMBER</h1>
+      <h1 id="warga">LOGIN SEBAGAI WARGA</h1>
+    </div>
+    <!-- ID MEMANGGIL  -->
+    <script type="application/javascript">
+      let login = document.getElementById("login");
+      let pass = document.getElementById("pass");
+      let admin = document.getElementById("admin");
+      let basic = document.getElementById("basic");
+      let member = document.getElementById("member");
+      let warga = document.getElementById("warga");
+      let tombol = document.getElementById("tombol");
+      let typologout = document.getElementById("typologout")
+
+      // INI ADLAH ADMIN
+      warga.style.display = "none";
+      member.style.display = "none";
+      admin.style.display = "none";
+      basic.style.display = "none";
+      typologout.style.display = "none"
+      // FUNCTION DATA
+      function typologin() {
+        localStorage.setItem("username", login.value);
+
+        if (login.value == "admin" && pass.value == "12345" && login.value) {
+          login.style.display = "none";
+          pass.style.display = "none";
+          tombol.style.display = "none";
+          alert("login sebagai admin");
+          localStorage.setItem("role", "admin");
+          basic.style.display = "none";
+          admin.style.display = "block";
+        } else {
+          alert("user login biassa");
+          login.style.display = "none";
+          pass.style.display = "none";
+          tombol.style.display = "none";
+          localStorage.setItem("role", "basic");
+          admin.style.display = "none";
+          basic.style.display = "block";
+        }
+      }
+      if (localStorage.getItem("username")) {
+        login.style.display = "none";
+        pass.style.display = "none";
+        tombol.style.display = "none";
+        if (localStorage.getItem("role") == "admin"){
+          basic.style.display = "none";
+          admin.style.display = "block";
+        } else {
+          admin.style.display = "none";
+          basic.style.dispalay = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

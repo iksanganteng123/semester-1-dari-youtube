@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>ini adalah tugas sesi 5</title>
+  </head>
+  <style>
+    #toot {
+      background-color: blue;
+      color: white;
+      font-size: 2em;
+      text-align: center;
+      height: 100vh;
+    }
+    *,html,body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+  <body>
+    <div id="toot">
+      <input type="text" placeholder="usernamepengguna" id="pengguna" />
+      <input type="password" placeholder="paswordpengguna" id="pasword" />
+      <button onclick="loginsaja()" id="button">LOGIN</button>
+      <button onclick="logout()" id="restart">LOGOUT</button>
+      <br />
+      <h1 id="admin">ANDA ADALAH SEORANG ADMIN</h1>
+      <h1 id="biasa">ANDA SEORANG PENGGUNA BIASA</h1>
+    </div>
+    <script type="application/javascript">
+      // UNTUK MEMANGGIL ID BODY
+      let toot = document.getElementById("toot");
+      let pengguna = document.getElementById("pengguna");
+      let pasword = document.getElementById("pasword");
+      let button = document.getElementById("button");
+      let restart = document.getElementById("restart");
+      let admin = document.getElementById("admin");
+      let biasa = document.getElementById("biasa");
+
+      restart.style.display = "none";
+      admin.style.display= "none";
+      biasa.style.display = "none";
+
+      function loginsaja() {
+          restart.style.display = "block";
+        console.log("tombol yang anda pencet");
+        console.log(pengguna.value);
+        console.log(pasword.value);
+        localStorage.setItem("pengguna", pengguna.value);
+
+        if (pengguna.value == "admin" && pasword.value == "321") {
+          pengguna.style.display = "none";
+          pasword.style.display = "none";
+          button.style.display = "none";
+          localStorage.setItem("role", "admin");
+          alert("ini adalah admin");
+          biasa.style.display = "none";
+          admin.style.display = "block";
+        } else {
+          alert("ini adalah pengguna biasa");
+          pengguna.style.display = "none";
+          pasword.style.display = "none";
+          button.style.display = "none";
+          localStorage.setItem("role", "biasa");
+          admin.style.display = "none";
+          biasa.style.display = "block";
+        }
+      }
+      if (localStorage.getItem("pengguna")) {
+          restart.style.display = "block";
+        pengguna.style.display = "none";
+        pasword.style.display = "none";
+        button.style.display = "none";
+        if (localStorage.getItem("role") == "admin") {
+          biasa.style.display = "none";
+          admin.style.display = "block";
+        } else {
+          admin.style.display = "none";
+          biasa.style.display = "block";
+        }
+      }
+      function logout() {
+        localStorage.clear();
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

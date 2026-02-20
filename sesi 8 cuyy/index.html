@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pasworrd gedeator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div
+      class="container d-flex justify-content-center align-items-center min-vh-100"
+    >
+    <div class="d-flex flex-column">
+        <h1>PASSWORD GENERATOR ICAN</h1>
+        <label for="passwordlength" class="text-uppercase fw-bolt"
+          >panjang password</label
+        >
+        <input class="form-control" id="passwordlength" type="number" />
+        <label for="password">passworrd</label>
+        <input class="form-control form-control" id="password" disabled type="password"/>
+        <button class="btn btn-dark text-uppercase fw-bolt btn-lg mt-2" onclick="getpassword()">generate password</button>
+        <a class="btn btn-primary text-uppercase fw-bolt btn-lg mt-2" onclick="savepassword()" id="saveButton">SAVE password</a>
+      </div>
+    </div>
+    <div>
+      <script src="index.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: beige;
+  color: black;
+}
+.dark {
+  background-color: black;
+  color: aliceblue;
+
+}
+.konten {
+ display: flex;
+ justify-content:center ;
+ justify-content:center ;
+ align-items: center;
+ width: 100%;
+ height: 100px;
+}
+
+nav{
+position: fixed;
+bottom: 0;
+background-color: black;
+width: 100%;
+padding: 15px;
+}
+nav a {
+  color: aliceblue;
+ padding: 15px;
+ text-decoration: none;
+}
+nav a:hover{
+  background-color: aqua;
+  cursor: pointer;
+  transition: background-color .5s ease-in-out;
+  border-radius: 50px
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top : 10%;
+  font-size: 16 px;
+  font-weight: 700;
+  animation: bebeledagan .5s infinite;
+}
+@keyframes bebeledagan {
+  0% {
+    font-size: 16px;
+  }
+  50% {
+    font-size :18px;
+  }
+  100%{
+
+  }
+}

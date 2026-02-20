@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=di, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* celiring */
+    html,
+    body,
+    :root {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      border: 1px solid black;
+      margin: 0 auto;
+      width: 500px;
+      padding: 15px;
+    }
+    .hasil {
+      font-size: 18px;
+      color: chocolate;
+      margin-top: 16px;
+    }
+    #tahunLahir {
+      padding: 15px;
+      background: aqua;
+      color: blue;
+      font-size: 25px;
+    }
+    #check-button {
+      padding: 15px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+    #check-button:hover {
+      background-color: tomato;
+      transition: 0.5s ease-in-out;
+      color: chartreuse;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h2>Class Cek Usia Anda</h2>
+      <label> PANJINGI TANGGAL LAHIR SIRE PEAA</label>
+      <input
+        id="tahunLahir"
+        type="number"
+        placeholder="Masukan Tahun Kelahiran"
+      />
+      <button id="check-button" onclick="cekResult()">Cek usia</button>
+      <p class="hasil" id="result">HASIL:</p>
+    </div>
+    <script>
+      function cekResult() {
+        const tahunLahir = document.getElementById("tahunLahir");
+        const lahir = tahunLahir.value;
+
+        const now = new Date().getFullYear(); //bernilai tahun saat ini secara otomatis
+        const age = now - lahir;
+      
+        const result = document.getElementById("result")
+        result.innerHTML = "umur sira siki adalah" + age
+      }
+    </script>
+  </body>
+</html>

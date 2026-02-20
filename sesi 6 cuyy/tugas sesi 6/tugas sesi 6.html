@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>TUGAS SESI 6</title>
+    <link rel="stylesheet" href="gaya.css" />
+  </head>
+  <body>
+    <div class="kontensatu">
+      <nav>
+        <a onclick="modemarah()">MODE MARAH</a>
+        <a onclick="restart()">RETART</a>
+        <a onclick="modehitam()"> MODE DARK</a>
+      </nav>
+      <h1>INI ADLAH SEBUAH MODE DARK 6</h1>
+      <a id="inti" class="inti"></a>
+      <a id="marah" class="marah"></a>
+    </div>
+
+    <!-- INI ADALAH SEBUAH JAVA SCRIPT  -->
+    <script>
+      // INI ADALAH SEBUAH LOGIN ID DALAM MODE
+      let inti = document.getElementById("inti");
+      let body = document.body;
+
+      // INI ADALH SEBUAH FUNGSI DARK MODE
+      const modelimit = 5;
+      let modebatas = 0;
+      let modehasil;
+
+      function modehitam() {
+        if (modehasil == 0) {
+          inti.textContent = "DARK MODE ANDA TELAH HABIS";
+          return;
+        }
+        modebatas += 1;
+        modehasil = modelimit - modebatas;
+        inti.textContent = `jika dark mode dipencet ${modebatas}x yang tersisa ${modehasil}`;
+
+        body.classList.toggle("ganti");
+      }
+      // INI ADALAH SEBUAH FUNCTION MODE MARAH
+      let marah = document.getElementById("marah");
+      const marahlimit = 3;
+      let marahconter = 0;
+      let marahhasil;
+
+      function modemarah() {
+        if (marahhasil == 0) {
+          marah.textContent = "MODE MARAH ANDA TELAH HABIS";
+          return;
+        }
+        marahconter += 1;
+        marahhasil = marahlimit - marahconter;
+        marah.textContent = `sisa mode amarah anda adalah ${marahconter}x yang yang di pencet adalah ${marahhasil}`;
+
+        body.classList.toggle("modemarah");
+      }
+      function restart() {
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

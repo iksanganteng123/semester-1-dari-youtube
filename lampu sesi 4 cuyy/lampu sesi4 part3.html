@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="end">
+  <head>
+    <title>ini adalah lampu on dan of</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div
+      class="flex justify-center items-center min-h-screen bg-gray-600 gap-10"
+    >
+      <!-- INI ADALAH LAMPU SATU  -->
+      <div class="felx flex-col gap-2 items-center">
+        <img src="lampu of.jpg" alt="" id="bohlam1" />
+        <label
+          for="AcceptConditions1"
+          class="relative block h-8 w-14 rounded-full bg-gray-300 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-green-500"
+        >
+          <input
+            type="checkbox"
+            id="AcceptConditions1"
+            class="sr-only peer"
+            onchange="saklar()"
+          />
+          <span
+            class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6"
+          ></span>
+        </label>
+      </div>
+      <!-- INI ADALAH LAMPU DUA  -->
+      <div class="felx flex-col gap-2 items-center">
+        <img src="lampu of.jpg" alt="" id="bohlam2" />
+        <label
+          for="AcceptConditions2"
+          class="relative block h-8 w-14 rounded-full bg-gray-300 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-green-500"
+        >
+          <input
+            type="checkbox"
+            id="AcceptConditions2"
+            class="sr-only peer"
+            onchange="saklar()"
+          />
+
+          <span
+            class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6"
+          ></span>
+        </label>
+      </div>
+      <!-- INI ADALAH LAMPU TIGA  -->
+      <div class="felx flex-col gap-2 items-center">
+        <img src="lampu of.jpg" alt="" id="bohlam3" />
+        <label
+          for="AcceptConditions3"
+          class="relative block h-8 w-14 rounded-full bg-gray-300 transition-colors [-webkit-tap-highlight-color:_transparent] has-checked:bg-green-500"
+        >
+          <input
+            type="checkbox"
+            id="AcceptConditions3"
+            class="sr-only peer"
+            onchange="saklar()"
+          />
+          <span
+            class="absolute inset-y-0 start-0 m-1 size-6 rounded-full bg-white transition-[inset-inline-start] peer-checked:start-6"
+          ></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- INI ADALAH SCRIPT JS LAMPU  -->
+    <script src="saklar.js" type="application/javascript"></script>
+  </body>
+</html>
